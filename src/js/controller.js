@@ -88,6 +88,7 @@ export default class Controller {
             dialogEl.remove();
             ticket.deleteTicket(ticketId);
         };
+        
     });
     };
 
