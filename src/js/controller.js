@@ -84,7 +84,7 @@ export default class Controller {
             dialogEl.remove();
             return;
         };
-        if (e.target.classlist.contains('create-btn')) {
+        if (e.target.classList.contains('create-btn')) {
             dialogEl.remove();
             ticket.deleteTicket(ticketId);
         };
