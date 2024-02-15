@@ -115,8 +115,15 @@ export default class Ticket {
       const ticketAll = JSON.parse(xhr.response);
       tickets.forEach((ticket) => {
         if (ticket.id == ticketAll.id) {
+          const form = document.querySelector('.form');
+          if (form != null) {
+            form.querySelector('.shot-description').value = ticketAll.name;
+            form.querySelector('.detailed-description').value = ticketAll.description;
+
+          }
           ticket.querySelector(".description").textContent =
             ticketAll.description;
+          
         }
       });
     };

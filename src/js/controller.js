@@ -50,6 +50,7 @@ export default class Controller {
         form = dialog.drowForm('Изменить тикет');
         document.body.appendChild(form);
 
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             if (e.submitter.classList.contains('cancel-btn')) {
@@ -102,6 +103,7 @@ export default class Controller {
             this.deleteDiolog(ticketEl.id, ticket)
         }
         else if (e.target.classList.contains('redaction-image') || e.target.classList.contains('redaction')) {
+            ticket.getTicketAll(ticketEl.id)
             this.redactionTicketForm(ticketEl.id);
         }
         else {
